@@ -21,13 +21,10 @@ import net.sf.jsqlparser.statement.select.SelectItem;
 
 public class TestFunction {
 	public static void main(String[] args) throws JSQLParserException {
-		String stmt = "SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country"
-				+ " HAVING COUNT(CustomerID) > 5 ORDER BY COUNT(CustomerID) DESC";
-		
-		CCJSqlParserManager parserManager = new CCJSqlParserManager();
-		Select select = (Select) parserManager.parse(new StringReader(stmt));
-        PlainSelect plainSelect = (PlainSelect) select.getSelectBody();
-        
+		//This will create this query
+		//SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country
+		//HAVING COUNT(CustomerID) > 5 ORDER BY COUNT(CustomerID) DESC
+		        
         List<SelectItem> itemList = new ArrayList<>();
         
         SelectExpressionItem a = new SelectExpressionItem();

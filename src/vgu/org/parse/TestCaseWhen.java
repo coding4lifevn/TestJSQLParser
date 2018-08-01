@@ -20,17 +20,15 @@ import net.sf.jsqlparser.statement.select.SelectItem;
 
 public class TestCaseWhen {
 	public static void main(String[] args) throws JSQLParserException {
-		String stmt = "SELECT OrderID, Quantity,\r\n" + 
-				"CASE\r\n" + 
-				"    WHEN Quantity > 30 THEN \"The quantity is greater than 30\"\r\n" + 
-				"    WHEN Quantity = 30 THEN \"The quantity is 30\"\r\n" + 
-				"    ELSE \"The quantity is something else\"\r\n" + 
-				"END\r\n" + 
-				"FROM OrderDetails;";
-		
-		CCJSqlParserManager parserManager = new CCJSqlParserManager();
-		Select select = (Select) parserManager.parse(new StringReader(stmt));
-        PlainSelect plainSelect = (PlainSelect) select.getSelectBody();
+		//This will create this query
+		//SELECT OrderID, Quantity, 
+		//CASE WHEN Quantity > 30 
+		//THEN The quantity is greater than 30 
+		//WHEN Quantity = 30
+		//THEN The quantity is 30 
+		//ELSE The quantity is something else
+		//END FROM OrderDetails
+
         
         List<SelectItem> itemList = new ArrayList<>();
         

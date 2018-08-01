@@ -28,7 +28,9 @@ import net.sf.jsqlparser.schema.Table;
 public class TestJoin {
 
 	public static void main(String[] args) throws JSQLParserException {
-		CCJSqlParserManager parserManager = new CCJSqlParserManager();
+		//This will create this query
+		//SELECT p.name, s.orderQty FROM product AS p INNER JOIN SalesOrderDetail 
+		//AS s ON p.ProductID = s.ProductID
         
 		// select items
         List <SelectItem> itemList = new ArrayList<SelectItem>();

@@ -20,14 +20,9 @@ import net.sf.jsqlparser.statement.select.SelectItem;
 
 public class TestWhere {
 	public static void main(String[] args) throws JSQLParserException {
-		String stmt = "SELECT ID, NAME, SALARY \r\n" + 
-				"FROM CUSTOMERS\r\n" + 
-				"WHERE SALARY > 2000 OR age < 25;";
-		
-		CCJSqlParserManager parserManager = new CCJSqlParserManager();
-		Select select = (Select) parserManager.parse(new StringReader(stmt));
-	    PlainSelect plainSelect = (PlainSelect) select.getSelectBody();
-	    
+		//This will create this query
+		//SELECT ID, Name, Salary FROM CUSTOMERS WHERE Salary > 2000 OR age < 25
+    
 	    Table cus = new Table();
 	    cus.setName("CUSTOMERS");
 	    
